@@ -61,15 +61,6 @@ If vehicles still turn too sharply, lower `fSteeringLock` in the active preset. 
 
 If you want heavier vehicles to feel more planted, reduce steering lock and keep traction conservative. If you want sportier cars to feel sharper, keep traction a little higher and reduce steering lock less aggressively.
 
-## GitHub Publishing
-
-If you want the version checker to work, publish the resource under the `codebstudios` organization and expose a plain-text `version.txt` file at the raw URL used in `server.lua`.
-
-Example:
-
-```text
-https://raw.githubusercontent.com/codebstudios/cb_vehicle_tuner/main/version.txt
-```
 
 ## License
 
