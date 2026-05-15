@@ -21,25 +21,7 @@ local function mergeTables(baseValues, overrideValues)
 end
 
 local function getPresetConfig()
-    local presets = CONFIG.presets or {}
-    local activePreset = CONFIG.activePreset
-    local preset = activePreset and presets[activePreset] or nil
-
-    if preset then
-        return {
-            name = activePreset,
-            label = preset.label or activePreset,
-            baseHandling = preset.baseHandling or CONFIG.baseHandling or CONFIG.handling or {},
-            useClassProfiles = preset.useClassProfiles == true,
-            useModelProfiles = preset.useModelProfiles == true,
-            classProfiles = preset.classProfiles or {},
-            modelProfiles = preset.modelProfiles or {}
-        }
-    end
-
     return {
-        name = "default",
-        label = "Default",
         baseHandling = CONFIG.baseHandling or CONFIG.handling or {},
         useClassProfiles = CONFIG.useClassProfiles == true,
         useModelProfiles = CONFIG.useModelProfiles == true,
